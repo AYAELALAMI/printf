@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * string_holder - prints strings
+ * string_handler - prints strings
  * @str: holds and prints the string
  * Return: the string
  */
-int string_holder(char *str)
+int string_handler(char *str)
 {
 	int n = 0;
 	int count = 0;
