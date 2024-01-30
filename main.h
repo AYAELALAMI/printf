@@ -7,8 +7,8 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int print_string(char *str);
+int string_handler(char *str);
 int _putchar_str(char *s);
-int print_numbers(int num);
+int numbers_handler(int num);
 
 #endif
