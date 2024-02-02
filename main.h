@@ -7,7 +7,12 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int _specifier(const char *format, va_list argu_ments);
 int string_handler(char *str);
-int _len_printerc(char *str);
+int _len_printer(char *str);
+int integer_handler(int num);
+int decimal_handler(int num);
+int binary_handler(unsigned int numb);
+
 
 #endif

@@ -10,38 +10,24 @@ int _printf(const char *format, ...)
 	va_list argu_ments;
 
 	va_start(argu_ments, format);
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{
 		return (-1);
 	}
+	else
 		while (*format)
 		{
-			if (format[0] == '%' && format[1] != '\0')
+			if (*format == '%')
 			{
 				format++;
-				switch (*format)
-				{
-					case 's':
-						count += string_handler(va_arg(argu_ments, char*));
-						break;
-					case 'c':
-						count += _putchar(va_arg(argu_ments, int));
-						break;
-					case '%':
-						count += _putchar(37);
-						break;
-					default:
-						count += _putchar(37);
-						count += _putchar(*format);
-						break;
-						}
-						}
+				count += _specifier(format, argu_ments);
+			}
 			else
 			{
 				count += _putchar(*format);
 			}
 			format++;
 		}
-		va_end(argu_ments);
-		return (count);
+	va_end(argu_ments);
+	return (count);
 }
