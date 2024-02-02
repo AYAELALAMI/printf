@@ -25,9 +25,6 @@ int _specifier(const char *format, va_list argu_ments)
 					case 'i':
 						count += integer_handler(va_arg(argu_ments, int));
 						break;
-					/*case 'b':
-						count += binary_handler(va_arg(argu_ments, unsigned int));
-						break;*/
 					default:
 						count += _putchar(37);
 						count += _putchar(*format);
