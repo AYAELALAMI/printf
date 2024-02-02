@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 				switch (*format)
 				{
 					case 's':
-						count += string_handler(va_arg(argu_ments, char*);
+						count += string_handler(va_arg(argu_ments, char*));
 						break;
 					case 'c':
 						count += _putchar(va_arg(argu_ments, int));
@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 						count += _putchar(37);
 						break;
 					default:
-						count += _putchar(37));
+						count += _putchar(37);
 						count += _putchar(*format);
 						break;
 						}
