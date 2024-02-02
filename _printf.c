@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	va_list argu_ments;
 
 	va_start(argu_ments, format);
-	if (!format)
+	if (format == NULL)
 	{
 		return (-1);
 	}
